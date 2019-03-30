@@ -1,16 +1,18 @@
 package mistacat.friendbot.commands;
 
+import lombok.Getter;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.core.hooks.ListenerAdapter;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
+@Getter
 public class CommandHandler extends ListenerAdapter {
-    public ArrayList<Command> commands = new ArrayList<>();
-    public static final String PREFIX = "*";
+    private ArrayList<Command> commands = new ArrayList<>();
+    private static final String PREFIX = "*";
 
-    public Command getCommand(final String name) {
+    private Command getCommand(final String name) {
         return commands.stream().filter(cmd -> cmd.getName() == name).findAny().orElse(null);
     }
 
