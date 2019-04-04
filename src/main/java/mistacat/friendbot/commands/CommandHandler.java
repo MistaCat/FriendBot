@@ -13,12 +13,12 @@ public class CommandHandler extends ListenerAdapter {
     private static final String PREFIX = "*";
 
     private Command getCommand(final String name) {
-        return commands.stream().filter(cmd -> cmd.getName() == name).findAny().orElse(null);
+        return commands.stream().filter(cmd -> cmd.getName().equalsIgnoreCase(name)).findAny().orElse(null);
     }
 
     @Override
     public void onMessageReceived(MessageReceivedEvent evt) {
-        if (evt.getAuthor().isBot() || evt.getMessage().getContentRaw().startsWith(PREFIX)) {
+        if (evt.getAuthor().isBot() || !evt.getMessage().getContentRaw().startsWith(PREFIX)) {
             return;
         }
 
