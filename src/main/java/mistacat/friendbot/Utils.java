@@ -10,6 +10,7 @@ public class Utils {
 
     /**
      * Returns a Json string from a URL.
+     * This lets you create a json object from websites so you can get information.
      * @param urlString
      * @return
      * @throws Exception
