@@ -12,8 +12,8 @@ import java.awt.*;
 /**
  * A simple baka reaction command
  */
-public class bakaCommand extends Command {
-    public bakaCommand() {
+public class BakaCommand extends Command {
+    public BakaCommand() {
         setName("baka");
         setDescription("BAKAAAAAAAAAAAAAAAA");
         setCommandType(CommandType.REACTIONS);
