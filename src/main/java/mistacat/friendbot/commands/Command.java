@@ -15,6 +15,7 @@ import net.dv8tion.jda.core.entities.MessageEmbed;
 public abstract class Command {
     private String name;
     private String description;
+    private CommandType commandType;
 
     /**
      * Every command you make will override this method.

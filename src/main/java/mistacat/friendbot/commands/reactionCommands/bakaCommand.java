@@ -2,6 +2,7 @@ package mistacat.friendbot.commands.reactionCommands;
 
 import mistacat.friendbot.Utils;
 import mistacat.friendbot.commands.Command;
+import mistacat.friendbot.commands.CommandType;
 import net.dv8tion.jda.core.EmbedBuilder;
 import net.dv8tion.jda.core.entities.Message;
 import org.json.JSONObject;
@@ -15,6 +16,7 @@ public class bakaCommand extends Command {
     public bakaCommand() {
         setName("baka");
         setDescription("BAKAAAAAAAAAAAAAAAA");
+        setCommandType(CommandType.REACTIONS);
     }
 
     @Override
