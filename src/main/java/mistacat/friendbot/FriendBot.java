@@ -38,7 +38,7 @@ public class FriendBot extends ListenerAdapter {
      */
     @Override
     public void onReady(ReadyEvent evt) {
-        commandHandler.getCommands().add(new bakaCommand());
+        commandHandler.addCommand(new bakaCommand());
         System.out.println("Friend bot online!");
     }
 }
