@@ -10,6 +10,7 @@ import lombok.Getter;
 
 @Getter @AllArgsConstructor
 public enum CommandType {
+    GENERAL("General"),
     REACTIONS("Reaction");
 
     String name;

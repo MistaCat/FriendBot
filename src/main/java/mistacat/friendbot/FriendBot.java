@@ -2,6 +2,7 @@ package mistacat.friendbot;
 
 import lombok.Getter;
 import mistacat.friendbot.commands.CommandHandler;
+import mistacat.friendbot.commands.generalCommands.HelpCommand;
 import mistacat.friendbot.commands.reactionCommands.BakaCommand;
 import net.dv8tion.jda.core.JDA;
 import net.dv8tion.jda.core.JDABuilder;
@@ -39,6 +40,7 @@ public class FriendBot extends ListenerAdapter {
     @Override
     public void onReady(ReadyEvent evt) {
         commandHandler.addCommand(new BakaCommand());
+        commandHandler.addCommand(new HelpCommand());
         System.out.println("Friend bot online!");
     }
 }
